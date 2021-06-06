@@ -1,3 +1,4 @@
+import asyncio
 import json
 from datetime import datetime
 from ..extension.covalenthq import Convalenthq
@@ -20,13 +21,27 @@ def analysisToken(address: str):
     data = r
     history = TokenHistory()
     totalTransactions = 0
+    matchedTransactions = []
     for j in data["data"]["items"]:
         if len(j["log_events"]) == 0 or j["log_events"][0]["decoded"] == None or j["log_events"][0]["decoded"]["name"] != "Swap":
             continue
         print(j["tx_hash"])
         totalTransactions += 1
-        transactionDetail, code = newCovalenthqApi.getTransactionLogs(j["tx_hash"])
+        matchedTransactions.append(j["tx_hash"])
 
+        
+    loop = asyncio.set_event_loop(asyncio.SelectorEventLoop())
+    loop = asyncio.get_event_loop()
+    fetchTransactions = loop.run_until_complete(newCovalenthqApi.getTransactionLogs(matchedTransactions))
+
+
+    for transactionDetail in fetchTransactions:
+
+        try:
+            transactionDetail = json.loads(transactionDetail)
+        except:
+            print(transactionDetail)
+            continue
         fromToken = ""
         fromTokenAmount = 0
         toToken = ""
