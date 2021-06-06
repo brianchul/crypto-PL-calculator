@@ -10,6 +10,7 @@ import random
 
 
 class Convalenthq():
+    MAX_RETRY = 10
     def __init__(self) -> None:
         self.address = ""
         self.transaction = ""
@@ -19,6 +20,7 @@ class Convalenthq():
         config =configparser.ConfigParser()
         config.read("config.ini")
         self.covalentApiKey = config["DEFAULT"]["covalentApiKey"]
+
         pass
 
     def getAddressTransactions(self, address):
@@ -26,11 +28,20 @@ class Convalenthq():
         response = requests.get(self.covalentApiUrl.format(prefix=addressUrl), auth=HTTPBasicAuth(self.covalentApiKey, ""))
         return json.loads(response.text), response.status_code
 
-    async def fetch(self, session, url):
-        sleepTime = random.randint(0,10)/10
-        time.sleep(sleepTime)
-        async with session.get(url) as response:
-            return await response.text()
+    async def fetch(self, session: aiohttp.ClientSession, url):
+        statusCode = 0
+        retryCount = 0
+        while statusCode != 200 or retryCount > self.MAX_RETRY:
+            async with session.get(url) as response:
+                statusCode = response.status
+                if statusCode == 200:
+                    responseText = await response.text()
+                    return responseText
+            sleepTime = random.randint(10,100)/100
+            print("rate limited: count {c}, wait for {t} second to retry".format(c=retryCount, t=sleepTime))
+            time.sleep(sleepTime)
+            retryCount += 1
+        return ""
 
     async def getTransactionLogs(self, transactionIDs):
 
