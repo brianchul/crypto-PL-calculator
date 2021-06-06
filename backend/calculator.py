@@ -16,7 +16,7 @@ binanceApiUrl = "https://api.binance.com/api/v3/klines"
 
 def getAddressTransactions(address):
     addressUrl = covalentAddressTransactionsPrefix.format(address=address)
-    response = requests.get(covalentApiUrl.format(prefix=addressUrl), auth=HTTPBasicAuth("ckey_75ec2368885f44c6abb4f325006", ""))
+    response = requests.get(covalentApiUrl.format(prefix=addressUrl), auth=HTTPBasicAuth(covalentApiKey, ""))
     return json.loads(response.text), response.status_code
 
 def getTransactionLogs(transactionID):
@@ -140,8 +140,6 @@ class TokenHistory():
 
 
 
-
-#f = open("./extension/addressTransactionHistory.json")
 r, code = getAddressTransactions(bscAddress)
 if code != 200:
     print(json.dumps(r))
@@ -170,11 +168,8 @@ for j in data["data"]["items"]:
             tokenDecimal = 10 ** int(i["sender_contract_decimals"])
             tokenValue = tokenValue / tokenDecimal
 
-            #print(tokenName, symbol, tokenValue)
-
             if "BNB" in symbol and swapCostUsd == 0:
                 bnbPrice = getBNBprice(swapDate)
-                #print("BNB 轉 USDT 成本:{cost}".format(cost=bnbPrice*tokenValue))
                 swapCostUsd = bnbPrice*tokenValue
             elif "USD" in symbol:
                 swapCostUsd = tokenValue
@@ -194,29 +189,3 @@ fp = open("transactions.json", "w")
 fp.write(json.dumps(history.printAll()))
 fp.close()
 print("Total transactions: {a}".format(a=totalTransactions))
-
-
-
-
-"""
-f = open("./extension/addressTransactionHistory.json")
-data = json.load(f)
-for j in data["data"]["items"]:
-    if len(j["log_events"]) == 0 or j["log_events"][0]["decoded"] == None or j["log_events"][0]["decoded"]["name"] != "Swap":
-        continue
-    print(j["tx_hash"])
-    transactionDetail, code = getTransactionLogs(j["tx_hash"])
-    for i in transactionDetail["data"]["items"][0]["log_events"]:
-        if i["decoded"]["name"] == "Transfer":
-            tokenName = i["sender_name"]
-            symbol = i["sender_contract_ticker_symbol"]
-            tokenValue = int(i["decoded"]["params"][2]["value"])
-            tokenDecimal = 10 ** int(i["sender_contract_decimals"])
-            tokenValue = tokenValue / tokenDecimal
-            print(tokenName, symbol, tokenValue)
-            if "BNB" in symbol:
-                bnbPrice = getBNBprice(datetime.fromisoformat(datetimeIsoFormatCleanup(data["data"]["items"][0]["block_signed_at"])))
-                print("BNB 轉 USDT 成本:{cost}".format(cost=bnbPrice*tokenValue))
-
-    print()
-"""
