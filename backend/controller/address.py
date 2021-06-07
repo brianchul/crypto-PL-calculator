@@ -29,7 +29,7 @@ def analysisToken(address: str):
         totalTransactions += 1
         matchedTransactions.append(j["tx_hash"])
 
-        
+
     loop = asyncio.set_event_loop(asyncio.SelectorEventLoop())
     loop = asyncio.get_event_loop()
     fetchTransactions = loop.run_until_complete(newCovalenthqApi.getTransactionLogs(matchedTransactions))
@@ -37,7 +37,7 @@ def analysisToken(address: str):
     fetchTransactions = [json.loads(tx) for tx in fetchTransactions]
 
     for transactionDetail in fetchTransactions:
-        
+
         fromToken = ""
         fromTokenAmount = 0
         toToken = ""
@@ -47,7 +47,6 @@ def analysisToken(address: str):
 
         for i in transactionDetail["data"]["items"][0]["log_events"]:
             if i["decoded"]["name"] == "Transfer":
-                tokenName = i["sender_name"]
                 symbol = i["sender_contract_ticker_symbol"]
                 tokenValue = int(i["decoded"]["params"][2]["value"])
                 tokenDecimal = 10 ** int(i["sender_contract_decimals"])

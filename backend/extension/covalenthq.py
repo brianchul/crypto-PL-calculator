@@ -5,10 +5,7 @@ import requests
 from requests.models import HTTPBasicAuth
 import json
 import configparser
-import time
-import random
 
-from requests.sessions import Session
 from ..extension.requestFetch import SessionFetch
 
 
@@ -36,7 +33,7 @@ class Convalenthq():
         tasks = []
         async with aiohttp.ClientSession(auth=BasicAuth(self.covalentApiKey, "")) as session:
             for txid in transactionIDs:
-                print(txid)
+                
                 transactionPrefix = self.covalentOneTransactionPrefix.format(transactionID=txid)
                 url = self.covalentApiUrl.format(prefix=transactionPrefix)
                 tasks.append(Fetch.fetch(session, url))
