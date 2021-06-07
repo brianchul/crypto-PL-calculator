@@ -16,7 +16,7 @@ def analysisToken(address: str):
 
     r, code = newCovalenthqApi.getAddressTransactions(address)
     if code != 200:
-        print(json.dumps(r))
+
         return json.dumps(r)
     data = r
     history = TokenHistory()
@@ -25,7 +25,7 @@ def analysisToken(address: str):
     for j in data["data"]["items"]:
         if len(j["log_events"]) == 0 or j["log_events"][0]["decoded"] == None or j["log_events"][0]["decoded"]["name"] != "Swap":
             continue
-        print(j["tx_hash"])
+
         totalTransactions += 1
         matchedTransactions.append(j["tx_hash"])
 
@@ -34,20 +34,16 @@ def analysisToken(address: str):
     loop = asyncio.get_event_loop()
     fetchTransactions = loop.run_until_complete(newCovalenthqApi.getTransactionLogs(matchedTransactions))
 
+    fetchTransactions = [json.loads(tx) for tx in fetchTransactions]
 
     for transactionDetail in fetchTransactions:
-
-        try:
-            transactionDetail = json.loads(transactionDetail)
-        except:
-            print(transactionDetail)
-            continue
+        
         fromToken = ""
         fromTokenAmount = 0
         toToken = ""
         toTokenAmount = 0
         swapCostUsd = 0
-        swapDate = datetime.fromisoformat(datetimeIsoFormatCleanup(j["block_signed_at"]))
+        swapDate = datetime.fromisoformat(datetimeIsoFormatCleanup(transactionDetail["data"]["items"][0]["block_signed_at"]))
 
         for i in transactionDetail["data"]["items"][0]["log_events"]:
             if i["decoded"]["name"] == "Transfer":
@@ -58,7 +54,8 @@ def analysisToken(address: str):
                 tokenValue = tokenValue / tokenDecimal
 
                 if "BNB" in symbol and swapCostUsd == 0:
-                    bnbPrice = newPriceApi.getBNBprice(swapDate)
+                    bnbPrice = loop.run_until_complete(newPriceApi.getBNBprice(swapDate))
+
                     swapCostUsd = bnbPrice*tokenValue
                 elif "USD" in symbol:
                     swapCostUsd = tokenValue
@@ -69,7 +66,7 @@ def analysisToken(address: str):
                 fromToken = symbol
                 fromTokenAmount = tokenValue
 
-        newTransaction = Transaction(j["tx_hash"], fromToken, fromTokenAmount, toToken, toTokenAmount, swapCostUsd, swapDate.isoformat())
+        newTransaction = Transaction(transactionDetail["data"]["items"][0]["tx_hash"], fromToken, fromTokenAmount, toToken, toTokenAmount, swapCostUsd, swapDate.isoformat())
         history.addTransaction(newTransaction)
     return json.dumps(history.printAll())
 

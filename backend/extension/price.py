@@ -1,5 +1,8 @@
 # tokenA -> Wrapped UST / BUSD-T / WBNB -> tokenB
 
+import asyncio
+import aiohttp
+from .requestFetch import SessionFetch
 import requests
 from datetime import datetime, timedelta
 import json
@@ -21,7 +24,10 @@ class Price():
     def checkSymbol(self, symbol):
         pass
 
-    def getBNBprice(self, startTime: datetime):
+
+
+    async def getBNBprice(self, startTime: datetime):
+        Fetch = SessionFetch()
         endTime = startTime + timedelta(minutes=1)
         parameters = {
             "symbol": "BNBUSDT",
@@ -29,11 +35,13 @@ class Price():
             "startTime": self.bnbApiTimestampFormat(startTime),
             "endTime": self.bnbApiTimestampFormat(endTime)
         }
-        response = requests.get(self.binanceApiUrl, params=parameters)
-        if response.text == "":
-            return 0
-        price = float(json.loads(response.text)[0][1])
-        return price
+        task = []
+        async with aiohttp.ClientSession() as session:
+            task.append(Fetch.fetch(session, self.binanceApiUrl, param=parameters))
+            fetched = await asyncio.gather(*task)
+
+            return float(json.loads(fetched[0])[0][1])
+
 
     def bnbApiTimestampFormat(self, dt: datetime):
         timestamp = dt.timestamp()
