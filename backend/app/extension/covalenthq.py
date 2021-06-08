@@ -4,7 +4,8 @@ from aiohttp.helpers import BasicAuth
 import requests
 from requests.models import HTTPBasicAuth
 import json
-import configparser
+from flask import current_app
+
 
 from ..extension.requestFetch import SessionFetch
 
@@ -17,9 +18,8 @@ class Convalenthq():
         self.covalentApiUrl = "https://api.covalenthq.com/v1/56/{prefix}"
         self.covalentOneTransactionPrefix = "transaction_v2/{transactionID}/"
         self.covalentAddressTransactionsPrefix = "address/{address}/transactions_v2/?page-size=9999&block-signed-at-asc=false"
-        config =configparser.ConfigParser()
-        config.read("config.ini")
-        self.covalentApiKey = config["DEFAULT"]["covalentApiKey"]
+
+        self.covalentApiKey = current_app.config['COVALENT_API']
 
         pass
 

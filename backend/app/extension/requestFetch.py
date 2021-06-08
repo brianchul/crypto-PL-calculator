@@ -1,6 +1,7 @@
 import aiohttp
 import random
 import time
+from flask import current_app
 
 
 class SessionFetch():
@@ -22,7 +23,7 @@ class SessionFetch():
                     responseText = await response.text()
                     return responseText
             sleepTime = random.randint(10,100)/100
-            print("rate limited: count {c}, wait for {t} second to retry".format(c=retryCount, t=sleepTime))
+            current_app.logger.warning("fetching url: {url} rate limited, retry count: {c}, wait for {t} second to retry".format(url=url, c=retryCount, t=sleepTime))
             time.sleep(sleepTime)
             retryCount += 1
         return ""

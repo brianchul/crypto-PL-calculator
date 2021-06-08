@@ -140,3 +140,4 @@ cython_debug/
 backend/config.ini
 *.json
 testZone/
+config.py

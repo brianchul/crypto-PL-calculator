@@ -1,4 +1,4 @@
-from backend.model.transaction import Transaction
+from .transaction import Transaction
 
 
 class Token(object):
