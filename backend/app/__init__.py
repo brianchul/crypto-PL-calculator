@@ -1,17 +1,27 @@
 from flask import Flask
+from flask_cors import CORS
 from config import config
 import logging
 from logging.handlers import TimedRotatingFileHandler
+from .middleware.errorHandler import register_errors
 
 
 def create_app(config_name):
     app = Flask(__name__)
+
+    CORS(app)
+    
     app.config.from_object(config[config_name])
 
+
     #register_logging(app)
+    register_errors(app)
 
     from .router.account import accountBlueprint
     app.register_blueprint(accountBlueprint, url_prefix="/account")
+
+    from .router.chartData import chartDataBlueprint
+    app.register_blueprint(chartDataBlueprint, url_prefix="/chart")
 
     formatter = logging.Formatter(
         "[%(asctime)s][%(filename)s:%(lineno)d][%(levelname)s][%(thread)d] - %(message)s")
