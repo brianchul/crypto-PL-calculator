@@ -1,3 +1,4 @@
+from flask import abort
 import asyncio
 import json
 from datetime import datetime
@@ -7,17 +8,21 @@ from ..extension.price import Price
 from ..model.token import TokenHistory
 from ..model.transaction import Transaction
 
+
 def getOneTransaction(txid: str):
     pass
 
 def analysisToken(address: str):
-    newCovalenthqApi = Convalenthq()
+    covalentApi = Convalenthq()
+    covalentApi.setAddress(address)
     newPriceApi = Price()
 
-    r, code = newCovalenthqApi.getAddressTransactions(address)
+    r, code = covalentApi.getAddressBalance()
     if code != 200:
+        abort(code, description=r["error_message"])
+        #return json.dumps(r)
 
-        return json.dumps(r)
+    r, code = covalentApi.getAddressTransactions()
     data = r
     history = TokenHistory()
     totalTransactions = 0
@@ -29,13 +34,16 @@ def analysisToken(address: str):
         totalTransactions += 1
         matchedTransactions.append(j["tx_hash"])
 
+    if len(matchedTransactions) == 0:
+        return []
+
 
     loop = asyncio.set_event_loop(asyncio.SelectorEventLoop())
     loop = asyncio.get_event_loop()
-    fetchTransactions = loop.run_until_complete(newCovalenthqApi.getTransactionLogs(matchedTransactions))
+    fetchTransactions = loop.run_until_complete(covalentApi.getTransactionLogs(matchedTransactions))
 
-    fetchTransactions = [json.loads(tx) for tx in fetchTransactions]
-
+    if len(fetchTransactions) == 0:
+        abort(500, "unable to fetch transaction detail")
     for transactionDetail in fetchTransactions:
 
         fromToken = ""
@@ -46,7 +54,7 @@ def analysisToken(address: str):
         swapDate = datetime.fromisoformat(datetimeIsoFormatCleanup(transactionDetail["data"]["items"][0]["block_signed_at"]))
 
         for i in transactionDetail["data"]["items"][0]["log_events"]:
-            if i["decoded"]["name"] == "Transfer":
+            if "decoded" in i and "name" in i["decoded"] and i["decoded"]["name"] == "Transfer":
                 symbol = i["sender_contract_ticker_symbol"]
                 tokenValue = int(i["decoded"]["params"][2]["value"])
                 tokenDecimal = 10 ** int(i["sender_contract_decimals"])
@@ -67,5 +75,5 @@ def analysisToken(address: str):
 
         newTransaction = Transaction(transactionDetail["data"]["items"][0]["tx_hash"], fromToken, fromTokenAmount, toToken, toTokenAmount, swapCostUsd, swapDate.isoformat())
         history.addTransaction(newTransaction)
-    return json.dumps(history.printAll())
+    return history.printAll()
 
