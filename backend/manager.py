@@ -1,7 +1,7 @@
 from app import create_app
 from flask_script import Manager, Shell, Server
 
-server = Server(host="0.0.0.0",port=3000, threaded=True)
+server = Server(host="0.0.0.0",port=3001, threaded=True)
 app = create_app('default')
 
 manager = Manager(app)
