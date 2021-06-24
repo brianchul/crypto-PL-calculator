@@ -1,15 +1,27 @@
-from flask import Blueprint, Response
+from flask import Blueprint, Response, abort
+import json
 from ..controller.address import analysisToken
+from ..middleware.response import successResponse
 
 
 accountBlueprint = Blueprint('account', __name__)
 
-@accountBlueprint.route("/")
+@accountBlueprint.route("/test")
 def accountIndex():
-    return ""
+    content = []
+    with open("transaction.json", "r") as f:
+        
+        content = json.loads(f.read())
+        f.close()
+    return successResponse(content)
+
+@accountBlueprint.route("/empty")
+def accountEmpty():
+    abort(404)
+    return 
 
 @accountBlueprint.route("/<address>/")
 def queryAddress(address):
     query = analysisToken(address)
-    return Response(query, 200)
+    return successResponse(query)
 
