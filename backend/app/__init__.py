@@ -1,4 +1,6 @@
+import os
 from flask import Flask
+from flask.helpers import send_from_directory
 from flask_cors import CORS
 from config import config
 import logging
@@ -7,10 +9,10 @@ from .middleware.errorHandler import register_errors
 
 
 def create_app(config_name):
-    app = Flask(__name__)
+    app = Flask(__name__,static_url_path='', static_folder="../../frontend/app/build")
 
     CORS(app)
-    
+
     app.config.from_object(config[config_name])
 
 
@@ -22,6 +24,10 @@ def create_app(config_name):
 
     from .router.chartData import chartDataBlueprint
     app.register_blueprint(chartDataBlueprint, url_prefix="/chart")
+
+    @app.route('/')
+    def index():
+        return send_from_directory(app.static_folder, "index.html")
 
     formatter = logging.Formatter(
         "[%(asctime)s][%(filename)s:%(lineno)d][%(levelname)s][%(thread)d] - %(message)s")
@@ -43,7 +49,6 @@ def register_logging(app):
     # socket_handler
     socketHandler = logging.handlers.SocketHandler('localhost', logging.handlers.DEFAULT_TCP_LOGGING_PORT)
     app.logger.addHandler(socketHandler)
-    print(app.logger.name)
 
     """
     # set own root logger
