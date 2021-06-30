@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+
+.site-page-header {
+  border: 1px solid rgb(235, 237, 240);
+  margin-bottom: 15px;
+}

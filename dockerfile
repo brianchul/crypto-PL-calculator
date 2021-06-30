@@ -10,6 +10,4 @@ WORKDIR /app/backend
 RUN pip install -r requirements.txt
 
 
-EXPOSE 3001
-
 CMD python manager.py runserver

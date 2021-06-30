@@ -154,8 +154,8 @@ export const AddressSelector: FC<IAddressSelector> = (props) => {
             >
                 {optionData.current !== null ? Object.keys(optionData.current).map(token => {
                     if (![fromTokenName, toTokenName].includes(token))
-                        if (fromTokenName !== "" && !data.current?.data[fromTokenName].pairSymbol.includes(token)) { }
-                        else if (toTokenName !== "" && !data.current?.data[toTokenName].pairSymbol.includes(token)) { }
+                        if (fromTokenName !== "" && !data.current?.data[fromTokenName]?.pairSymbol.includes(token)) { }
+                        else if (toTokenName !== "" && !data.current?.data[toTokenName]?.pairSymbol.includes(token)) { }
                         else return <Select.Option key={optionData.current[token].description} value={optionData.current[token].value}>{token}</Select.Option>
                 }) : <Spin size="small" />}
             </Select>
