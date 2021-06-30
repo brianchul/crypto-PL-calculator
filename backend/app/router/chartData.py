@@ -12,15 +12,6 @@ def queryAddress():
 
     return successResponse(r)
 
-@chartDataBlueprint.route("/test", methods={"GET"})
-def queryTest():
-    content = []
-    with open("chart.json", "r") as f:
-        
-        content = json.loads(f.read())
-        f.close()
-    return successResponse(content)
-
 @chartDataBlueprint.route("/chartPair", methods={"GET"})
 def getpairs():
     content = []

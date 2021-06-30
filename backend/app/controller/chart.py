@@ -18,14 +18,18 @@ def queryPrice(fromToken="0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", toToken="
             "since": since,
             "till": till,
             "window": int(interval),
-            
             "minTrade": 10
         }
     }
     url = "https://graphql.bitquery.io"
-    resp = requests.post(url=url,headers=header, json=body)
-    if resp.status_code != 200:
-        abort(resp.status_codes,resp.text)
-    elif "errors" in json.loads(resp.text):
-        abort(400, json.loads(resp.text)["errors"][0]["message"])
-    return resp.text
+    try:
+        resp = requests.post(url=url,headers=header, json=body)
+        if resp.status_code != 200:
+            abort(resp.status_codes,resp.text)
+        elif "errors" in json.loads(resp.text):
+            abort(400, json.loads(resp.text)["errors"][0]["message"])
+        return resp.text
+    except Exception as e:
+        current_app.logger.warn(json.dumps(body["variables"]))
+        current_app.logger.error(e)
+        abort(500, "There's an error")
