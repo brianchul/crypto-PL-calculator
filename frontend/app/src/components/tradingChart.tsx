@@ -156,6 +156,11 @@ const TradingChart: FC = () => {
         }
         dataChangedTrigger.current = !dataChangedTrigger.current
     }
+
+    const resetZoom = () => {
+        candlestickSeries.current?.priceScale().applyOptions({ autoScale: true })
+    }
+
     useEffect(() => {
         chart.current = createChart("tradingchart", { width: 700, height: 600 })
         candlestickSeries.current = chart.current.addCandlestickSeries()
@@ -176,7 +181,10 @@ const TradingChart: FC = () => {
             <Row>
                 <Space direction="vertical" size={12}>
                     <AddressSelector selected={inputOptions} />
-                    <Button onClick={refreshChart} >refresh</Button>
+                    <Space direction="horizontal" size={6}>
+                        <Button onClick={refreshChart} >refresh</Button>
+                        <Button onClick={ resetZoom }>reset zoom</Button>
+                    </Space>
                 </Space>
             </Row>
             <div id="tradingchart"> </div>
