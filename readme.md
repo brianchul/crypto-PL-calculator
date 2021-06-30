@@ -1,3 +1,11 @@
+# A crypto dex tool web
+with token exchange profit & lost analyzer and dex token pair candlestick chart
+
+support bsc network in this moment
+## Example
+
+https://crypto-pl-calculator.herokuapp.com/
+
 ## installaction
 
 ### to load venv to powershell, use:
