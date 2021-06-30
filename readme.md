@@ -2,7 +2,7 @@
 with token exchange profit & lost analyzer and dex token pair candlestick chart
 
 support bsc network in this moment
-## Example
+## Demo
 
 https://crypto-pl-calculator.herokuapp.com/
 
@@ -55,3 +55,7 @@ backend
 - [x] add typescript support
 - [ ] UI/UX
 - [ ] add mvvm pattern
+
+
+## license
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
