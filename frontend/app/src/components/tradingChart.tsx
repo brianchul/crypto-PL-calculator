@@ -179,6 +179,7 @@ const TradingChart: FC = () => {
     return (
         <>
             <Row>
+                <div>Select token using dropdown or manual input token contract address</div>
                 <Space direction="vertical" size={12}>
                     <AddressSelector selected={inputOptions} />
                     <Space direction="horizontal" size={6}>

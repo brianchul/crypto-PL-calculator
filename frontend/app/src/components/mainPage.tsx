@@ -31,6 +31,7 @@ const MainPage: FC = () => {
     return (
         <Row>
             <Col span={10} offset={1}>
+                <div>You can type "test" as address to get example analysis</div>
                 <Input placeholder="Address" onChange={(e) => { GetAccount(e.target.value) }} />
                 <Button onClick={FetchAccount}>
                     get account
