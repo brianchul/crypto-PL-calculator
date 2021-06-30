@@ -6,9 +6,9 @@ import requests, json
 
 
 def queryPrice(fromToken="0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c", toToken="0xe9e7cea3dedca5984780bafc599bd69add087d56", interval=60, since=(datetime.now(timezone.utc)-timedelta(days=1)).isoformat(),till=datetime.now(timezone.utc).isoformat()):
-    bigQueryAPIKEY = current_app.config["BIGQUERY_API"]
+    bitQueryAPIKEY = current_app.config["BITQUERY_API"]
     header = {
-        "X-API-KEY": bigQueryAPIKEY
+        "X-API-KEY": bitQueryAPIKEY
     }
     body = {
         "query": "query GetCandleData(\n  $baseCurrency: String!,\n  $since: ISO8601DateTime,\n  $till: ISO8601DateTime,\n  $quoteCurrency: String!,\n  $exchangeAddresses: [String!]\n  $minTrade: Float\n  $window: Int) {\n    ethereum(network: bsc) {\n        dexTrades(\n            options: {asc: \"timeInterval.minute\"}\n            date: {since: $since, till: $till}\n            exchangeAddress: {in: $exchangeAddresses}\n            baseCurrency: {is: $baseCurrency}\n            quoteCurrency: {is: $quoteCurrency} # WBNB\n            tradeAmountUsd: {gt: $minTrade}\n        ) {\n            timeInterval {\n                minute(count: $window, format: \"%Y-%m-%dT%H:%M:%SZ\")\n            }\n            baseCurrency {\n                symbol\n                address\n            }\n            quoteCurrency {\n                symbol\n                address\n            }\n\n            tradeAmount(in: USD)\n            trades: count\n            quotePrice\n            maximum_price: quotePrice(calculate: maximum)\n            minimum_price: quotePrice(calculate: minimum)\n            open_price: minimum(of: block, get: quote_price)\n            close_price: maximum(of: block, get: quote_price)\n        }\n    }\n}\n",

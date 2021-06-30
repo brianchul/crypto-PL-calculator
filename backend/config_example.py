@@ -4,8 +4,9 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 class Config:
     DEBUG = False
+    COVALENT_API = os.environ.get("COVALENT_API")
     MAX_RETRY = 2
-    COVALENT_API = ''
+    BITQUERY_API = os.environ.get("BITQUERY_API")
 
 
 class DevelopmentConfig(Config):
