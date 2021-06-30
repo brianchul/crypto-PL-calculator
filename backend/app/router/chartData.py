@@ -24,7 +24,7 @@ def queryTest():
 @chartDataBlueprint.route("/chartPair", methods={"GET"})
 def getpairs():
     content = []
-    with open("chart.json", "r") as f:
+    with open("pair_sort.json", "r") as f:
         
         content = json.loads(f.read())
         f.close()

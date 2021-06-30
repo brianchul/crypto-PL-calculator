@@ -1,13 +1,14 @@
 import { FC, useEffect, useRef, useState } from 'react'
-import {createChart, IChartApi, ISeriesApi, UTCTimestamp} from 'lightweight-charts'
+import { createChart, IChartApi, ISeriesApi, UTCTimestamp } from 'lightweight-charts'
 import useFetchOne from './fetchApi'
 import { IApi } from '../models/api'
 import { IChart, IRequestChart } from '../models/chart'
 import { DexTrade, ITrade } from '../models/trade'
-import {Alert, Button, DatePicker, Divider, Input, Row, Space} from 'antd'
+import { Alert, Button, DatePicker, Divider, Input, Row, Space } from 'antd'
+import { AddressSelector } from './selectionChart'
 
 
-const TradingChart:FC = () => {
+const TradingChart: FC = () => {
     const [fromToken, setFromToken] = useState("0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c");
     const [fromTokenName, setFromTokenName] = useState("WBNB");
     const [toToken, setToToken] = useState("0xe9e7cea3dedca5984780bafc599bd69add087d56");
@@ -15,31 +16,42 @@ const TradingChart:FC = () => {
     const [mediumToken, setMediumToken] = useState("");
     const [mediumTokenName, setMediumTokenName] = useState("");
     const [interval, setInterval] = useState(60);
-    const [since, setSince] = useState(new Date((new Date()).valueOf() - 1000*60*60*24).toISOString());
+    const [since, setSince] = useState(new Date((new Date()).valueOf() - 1000 * 60 * 60 * 24).toISOString());
     const [till, setUntil] = useState(new Date().toISOString());
 
 
-    const url = "http://localhost:3001/chart/"
+    const url = "/chart/"
     const requestBody = useRef<IRequestChart | null>(null)
 
     const chart = useRef<IChartApi | null>(null)
-    const candlestickSeries= useRef<ISeriesApi<"Candlestick"> | null>(null)
-    const {errMsg, responseCode, data,fetchData} = useFetchOne<ITrade>()
+    const candlestickSeries = useRef<ISeriesApi<"Candlestick"> | null>(null)
+    const { errMsg, responseCode, data, fetchData } = useFetchOne<ITrade>()
 
+    const dataChangedTrigger = useRef(false)
 
-    const getSince = (date:any, dateString:string) => {
-        setSince(date.toISOString())
+    const inputOptions = (fromToken?: string, toToken?: string, mediumToken?: string, interval?: number, since?: string, till?: string) => {
+        if (fromToken !== undefined)
+            setFromToken(fromToken)
+        if (mediumToken !== undefined)
+            setMediumToken(mediumToken)
+        if (toToken !== undefined)
+            setToToken(toToken)
+        if (interval !== undefined)
+            setInterval(interval)
+        if (since !== undefined)
+            setSince(since)
+        if (till !== undefined)
+            setUntil(till)
     }
-    const getUntil = (date:any, dateString:string) => {
-        setUntil(date.toISOString())
-    }
 
 
-    const parseChartApi = (api:IApi<ITrade>) => {
+
+
+    const parseChartApi = (api: IApi<ITrade>) => {
         const baseCurrency = api.data.data.ethereum.dexTrades[0].baseCurrency.symbol
         const quoteCurrency = api.data.data.ethereum.dexTrades[0].quoteCurrency.symbol
-        const parse:IChart[] = api.data.data.ethereum.dexTrades.map((details:DexTrade) => {
-            return{
+        const parse: IChart[] = api.data.data.ethereum.dexTrades.map((details: DexTrade) => {
+            return {
                 time: Math.floor(new Date(details.timeInterval.minute).getTime() / 1000) as UTCTimestamp,
                 open: Number(details.open_price),
                 high: details.maximum_price,
@@ -47,7 +59,7 @@ const TradingChart:FC = () => {
                 close: Number(details.close_price)
             }
         })
-        return {parse, baseCurrency, quoteCurrency}
+        return { parse, baseCurrency, quoteCurrency }
     }
 
     const makeRequest = async () => {
@@ -59,21 +71,21 @@ const TradingChart:FC = () => {
             })
         })
 
-        if(data.current !== undefined && data.current.data !== null){
+        if (data.current !== undefined && data.current.data !== null) {
             return parseChartApi(data.current)
         }
     }
-    const calcTokenRatio = (fromToken:IChart[], toToken:IChart[]):IChart[] => {
-        let calculated:IChart[] = []
+    const calcTokenRatio = (fromToken: IChart[], toToken: IChart[]): IChart[] => {
+        let calculated: IChart[] = []
         let baseToken = fromToken
         let quoteToken = toToken
-        if(fromToken.length > toToken.length){
+        if (fromToken.length > toToken.length) {
             baseToken = toToken
             quoteToken = fromToken
         }
 
         const startTime = quoteToken[0].time
-        const endTime = quoteToken[quoteToken.length-1].time
+        const endTime = quoteToken[quoteToken.length - 1].time
         calculated = baseToken.filter((value) => {
             return value.time >= startTime && value.time <= endTime
         })
@@ -90,8 +102,8 @@ const TradingChart:FC = () => {
 
 
     const refreshChart = async () => {
-        let setData:IChart[] = []
-        if(mediumToken !== ""){
+        let setData: IChart[] = []
+        if (mediumToken !== "") {
             requestBody.current = {
                 fromToken: fromToken,
                 toToken: mediumToken,
@@ -111,7 +123,7 @@ const TradingChart:FC = () => {
 
             const toTokenPrice = await makeRequest()
 
-            if(fromTokenPrice !== undefined && toTokenPrice !== undefined){
+            if (fromTokenPrice !== undefined && toTokenPrice !== undefined) {
                 setData = calcTokenRatio(fromTokenPrice.parse, toTokenPrice.parse)
                 setFromTokenName(fromTokenPrice.baseCurrency)
                 setToTokenName(toTokenPrice.baseCurrency)
@@ -119,7 +131,7 @@ const TradingChart:FC = () => {
             }
 
 
-        }else{
+        } else {
             requestBody.current = {
                 fromToken: fromToken,
                 toToken: toToken,
@@ -129,7 +141,7 @@ const TradingChart:FC = () => {
             }
             const tokenPrice = await makeRequest()
 
-            if(tokenPrice !== undefined){
+            if (tokenPrice !== undefined) {
                 setData = tokenPrice.parse
                 setFromTokenName(tokenPrice.baseCurrency)
                 setToTokenName(tokenPrice.quoteCurrency)
@@ -137,49 +149,38 @@ const TradingChart:FC = () => {
             }
         }
 
-        if(candlestickSeries.current !== null){
+        if (candlestickSeries.current !== null) {
             candlestickSeries.current.setData(setData)
-            candlestickSeries.current.priceScale().applyOptions({autoScale:true})
-            candlestickSeries.current.applyOptions({title:`${fromTokenName} / ${toTokenName}`}) 
-        }
+            candlestickSeries.current.priceScale().applyOptions({ autoScale: true })
 
+        }
+        dataChangedTrigger.current = !dataChangedTrigger.current
     }
     useEffect(() => {
-        chart.current = createChart("tradingchart", {width: 700, height: 600})
+        chart.current = createChart("tradingchart", { width: 700, height: 600 })
         candlestickSeries.current = chart.current.addCandlestickSeries()
-        candlestickSeries.current.applyOptions({priceFormat:{precision:10, minMove:0.0000000001}})
+        candlestickSeries.current.applyOptions({ priceFormat: { precision: 10, minMove: 0.0000000001 } })
 
         refreshChart()
     }, []);
 
+    useEffect(() => {
+        if(mediumTokenName !== "")
+            candlestickSeries.current?.applyOptions({ title: `${fromTokenName}-> ${mediumTokenName} -> ${toTokenName}` })
+        else
+            candlestickSeries.current?.applyOptions({ title: `${fromTokenName} / ${toTokenName}` })
+    }, [fromTokenName, toTokenName]);
+
     return (
         <>
-        <Row>
-            <Space direction="horizontal" size={12}>
-                <span>from:</span>
-                <Input placeholder="from token" onChange={(e) => {setFromToken(e.target.value)}} />
-                <span>to:</span>
-                <Input placeholder="to token" onChange={(e) => {setToToken(e.target.value)}} />
-                <span>medium:</span>
-                <Input placeholder="medium token" onChange={(e) => {setMediumToken(e.target.value)}} />
-                <span>interval:</span>
-                <Input placeholder="interval" onChange={(e) => {setInterval(Number(e.target.value))}} />
-            </Space>
-
-        </Row>
-        <Space direction="horizontal" size={12}>
-            <span>Since:</span>
-            <DatePicker onChange={getSince} showTime={true}/>
-            <span>Until:</span>
-            <DatePicker onChange={getUntil} showTime={true}/>
-            <Divider />
-        </Space>
-        <Button onClick={refreshChart} >refresh</Button>
-
-        <Divider />
-        {mediumTokenName !== "" ? <div>Pair: {fromTokenName} to {toTokenName}; base: {mediumTokenName} </div> :<div>Pair: {fromTokenName} to {toTokenName}</div>}
-        <div id="tradingchart"> </div>
-        {responseCode > 200 && <Alert message={errMsg} type="error" banner />}
+            <Row>
+                <Space direction="vertical" size={12}>
+                    <AddressSelector selected={inputOptions} />
+                    <Button onClick={refreshChart} >refresh</Button>
+                </Space>
+            </Row>
+            <div id="tradingchart"> </div>
+            {responseCode > 200 && <Alert message={errMsg} type="error" banner />}
         </>
     )
 }

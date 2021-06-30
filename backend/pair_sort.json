@@ -1,0 +1,1550 @@
+{
+    "$Bicurious": {
+        "name": "Bicurious",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x71124344be937d70ac5c7b939c920eb60768a854"
+    },
+    "$LastInu": {
+        "name": "TheLastInu",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xb60506c31d91f58dcff6473aa9b2565da7dff383"
+    },
+    "2CRZ": {
+        "name": "2CrazyToken",
+        "pairSymbol": [
+            "BUSD"
+        ],
+        "tokenAddress": "0x3a6e8b36645d6c252714daddd28ec0673535a109"
+    },
+    "ACE": {
+        "name": "NFTAuction.Exchange",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x6221db42e5b63cac44167394116bf8e28cab380f"
+    },
+    "ADA": {
+        "name": "Cardano Token",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x3ee2200efb3400fabb9aacf31297cbdd1d435d47"
+    },
+    "AK": {
+        "name": "Astrokitties",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x41536dab3bf116d6383b93167d8f36949f2e5278"
+    },
+    "AKUAKU": {
+        "name": "AkuAku",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x02e5393758de06588634215afb71e7ee8b4362d0"
+    },
+    "ALM": {
+        "name": "AliumToken",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x7c38870e93a1f959cb6c533eb10bbc3e438aac11"
+    },
+    "ALPACA": {
+        "name": "AlpacaToken",
+        "pairSymbol": [
+            "BUSD",
+            "WBNB"
+        ],
+        "tokenAddress": "0x8f0528ce5ef7b51152a59745befdd91d97091d2f"
+    },
+    "APYS": {
+        "name": "APYSwap",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x37dfacfaeda801437ff648a1559d73f4c40aacb7"
+    },
+    "AQUAGOAT": {
+        "name": "Aquagoat",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x07af67b392b7a202fad8e0fbc64c34f33102165b"
+    },
+    "ARCHIE": {
+        "name": "Archie Token",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xd04ae147af9336af4b5d2aa7f9d92aa1a8bdabf9"
+    },
+    "ASS": {
+        "name": "Australian Shepherd Token",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x7c63f96feafacd84e75a594c00fac3693386fbf0"
+    },
+    "AUTO": {
+        "name": "AUTOv2",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xa184088a740c695e156f91f5cc086a06bb78b827"
+    },
+    "BABYODA": {
+        "name": "BabYoda",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xdc3d56d9f3a2b3cab5bd6ca6549229c33cb11aab"
+    },
+    "BAO": {
+        "name": "BAO",
+        "pairSymbol": [
+            "USDT"
+        ],
+        "tokenAddress": "0x4ada1af2d976a94f4ea6e353947e30ffc63c6b56"
+    },
+    "BBcorgidoge": {
+        "name": "Baby Corgi Doge Coin",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x77746affa4d1829810730001a58c4dacd89f0ef4"
+    },
+    "BFLOKI": {
+        "name": "Baby Floki Inu",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x02a9d7162bd73c2b35c5cf6cdd585e91928c850a"
+    },
+    "BIDENANCE": {
+        "name": "BIDENANCE",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x7b49f40fcbedea840c443c78153c3b9af9a52d1d"
+    },
+    "BKPK": {
+        "name": "BKPK",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xf60dbb881521a9da9b4b3d6d62ebd7d5470b9001"
+    },
+    "BNBX": {
+        "name": "BNBX Finance",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x1592271a485e7f12de1eccf2555cea7763f29cac"
+    },
+    "BONFIRE": {
+        "name": "Bonfire",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x5e90253fbae4dab78aa351f4e6fed08a64ab5590"
+    },
+    "BOOST": {
+        "name": "EverBoost(t.me/EverBoostBSC)",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x7d6fe137997a69f1b32903ba64c2aa19a6fdc6ff"
+    },
+    "BOSHIB": {
+        "name": "Boss Shiba Inu",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x84af772ace43f7e509dafee071473d3c6169a31f"
+    },
+    "BOXER": {
+        "name": "BoxerInu",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x192e9321b6244d204d4301afa507eb29ca84d9ef"
+    },
+    "BP": {
+        "name": "BunnyPark",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xacb8f52dc63bb752a51186d1c55868adbffee9c1"
+    },
+    "BRT": {
+        "name": "BASE REWARD TOKEN",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x0d499b25bce7aa72bb6c50e434e2ed26fe1e785d"
+    },
+    "BSCPAD": {
+        "name": "BSCPAD.com",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x5a3010d4d8d3b5fb49f8b6e57fb9e48063f16700"
+    },
+    "BSCS": {
+        "name": "BSCS Token",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xbcb24afb019be7e93ea9c43b7e22bb55d5b7f45d"
+    },
+    "BSL": {
+        "name": "B-LAUNCH",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xb60501346240fcde1615de56ea9fff1ac1da5673"
+    },
+    "BTCB": {
+        "name": "BTCB Token",
+        "pairSymbol": [
+            "WBNB",
+            "BUSD"
+        ],
+        "tokenAddress": "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c"
+    },
+    "BTT": {
+        "name": "BitTorrent",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x8595f9da7b868b1822194faed312235e43007b49"
+    },
+    "BULLSEYE": {
+        "name": "Bullseye",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xf66a16a0e98cdbd60cbfc0a280150fc69697d853"
+    },
+    "BUNNY": {
+        "name": "Bunny Token",
+        "pairSymbol": [
+            "WBNB",
+            "SEED"
+        ],
+        "tokenAddress": "0xc9849e6fdb743d08faee3e34dd2d1bc69ea11a51"
+    },
+    "BUSD": {
+        "name": "BUSD Token",
+        "pairSymbol": [
+            "WBNB",
+            "USDT",
+            "USDC",
+            "BTCB",
+            "DAI",
+            "UST",
+            "Cake",
+            "ALPACA",
+            "O3",
+            "LINA",
+            "NOSTA",
+            "LUCKY",
+            "TRAIL",
+            "2CRZ",
+            "CATE",
+            "ETH",
+            "DOGE",
+            "DRABA",
+            "TOMAHAWK",
+            "POPIT",
+            "SMAN",
+            "CBN",
+            "EYFI",
+            "SEED",
+            "DINO"
+        ],
+        "tokenAddress": "0xe9e7cea3dedca5984780bafc599bd69add087d56"
+    },
+    "Baby EverDoge": {
+        "name": "Baby EverDoge",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x06c4212ae2fea51a27a045d968e73f7e91ea5521"
+    },
+    "BabyDoge": {
+        "name": "Baby Doge Coin",
+        "pairSymbol": [
+            "WBNB",
+            "USDT"
+        ],
+        "tokenAddress": "0xc748673057861a797275cd8a068abb95a902e8de"
+    },
+    "BabyFlokiDoge": {
+        "name": "Baby Floki Doge",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x4b8e95e96ea9ec7ea5cfe0cd94d9269f737663d0"
+    },
+    "BabyKishu": {
+        "name": "Baby Kishu",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x2270a2e12ad55d2493c85d4d92e648741d4c045b"
+    },
+    "BabyShiba": {
+        "name": "Baby Shiba",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x2302e370e98890bf2eb547286bf8f8bb318f8e7b"
+    },
+    "BabyShibaInu": {
+        "name": "Baby Shiba Inu",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xaecf6d1aff214fef70042740054f0f6d0caa98ab"
+    },
+    "CARBS": {
+        "name": "Laser Carbs Token",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x3b60cc2ada3f6cca5c26429e340b66086ac2af94"
+    },
+    "CATE": {
+        "name": "CateCoin",
+        "pairSymbol": [
+            "BUSD"
+        ],
+        "tokenAddress": "0x118f073796821da3e9901061b05c0b36377b877e"
+    },
+    "CBC": {
+        "name": "Carbon Coin - CNES",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x793cea0f1003411396b3a81a77d92fe37015e7a9"
+    },
+    "CBN": {
+        "name": "Carbon Token",
+        "pairSymbol": [
+            "BUSD"
+        ],
+        "tokenAddress": "0x2f14091926e346d88264eaa903c5011957496019"
+    },
+    "CERBERUS": {
+        "name": "Cerberus Token",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x8b3268a23131dafbd77165690767f285c1aac6c5"
+    },
+    "CLOWN": {
+        "name": "CLOWN",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xfa949ef822125233f1e1a0691c13977b4354b257"
+    },
+    "COCO": {
+        "name": "Cocoin",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x9ffafc014832b803aaaab0d2e4d9c127eca0e034"
+    },
+    "CORGI": {
+        "name": "Corgi doge",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x802c68730212295149f2bea78c25e2cf5a05b8a0"
+    },
+    "Cake": {
+        "name": "PancakeSwap Token",
+        "pairSymbol": [
+            "WBNB",
+            "BUSD"
+        ],
+        "tokenAddress": "0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82"
+    },
+    "DAI": {
+        "name": "Dai Token",
+        "pairSymbol": [
+            "BUSD",
+            "WBNB"
+        ],
+        "tokenAddress": "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3"
+    },
+    "DASS": {
+        "name": "DashSports",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xca981cb99478d190cac2de266ed04e06e341e30e"
+    },
+    "DDOGE": {
+        "name": "Downy Doge",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x63102605448c997aca9386d2070628a961ef4433"
+    },
+    "DINK": {
+        "name": "DinkDoink",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xefd39883adb365fbf591bc0d624c9e1b12aea35f"
+    },
+    "DINO": {
+        "name": "Dino Token",
+        "pairSymbol": [
+            "BUSD"
+        ],
+        "tokenAddress": "0xf317932ee2c30fa5d0e14416775977801734812d"
+    },
+    "DOGE": {
+        "name": "Dogecoin",
+        "pairSymbol": [
+            "WBNB",
+            "BUSD"
+        ],
+        "tokenAddress": "0xba2ae424d960c26247dd6c32edc70b295c744c43"
+    },
+    "DOGEBNB": {
+        "name": "DOGEBNB",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x0a2cbf58a3d398c868c2eba030ac3d142584cd57"
+    },
+    "DOT": {
+        "name": "Polkadot Token",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x7083609fce4d1d8dc0c979aab8c869ea2c873402"
+    },
+    "DPET": {
+        "name": "My DeFi Pet Token",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xfb62ae373aca027177d1c18ee0862817f9080d08"
+    },
+    "DRABA": {
+        "name": "NFT DRAGON BALL MARKETPLACE",
+        "pairSymbol": [
+            "BUSD"
+        ],
+        "tokenAddress": "0xc0147c55b6743ff839b63b83c02ca54e4d90b2af"
+    },
+    "Duke": {
+        "name": "Duke inu Token",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xaee234825dc4687fae606485c1ebd06336052bcc"
+    },
+    "EGG": {
+        "name": "Goose Golden Egg",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xf952fc3ca7325cc27d15885d37117676d25bfda6"
+    },
+    "EPS": {
+        "name": "Ellipsis",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xa7f552078dcc247c2684336020c03648500c6d9f"
+    },
+    "ETH": {
+        "name": "Ethereum Token",
+        "pairSymbol": [
+            "WBNB",
+            "USDC",
+            "USDT",
+            "BUSD"
+        ],
+        "tokenAddress": "0x2170ed0880ac9a755fd29b2688956bd959f933f8"
+    },
+    "EUSD": {
+        "name": "EUSD",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xa1fd12820f0c1c492dd87f8a0d12043d8f24f8a6"
+    },
+    "EVERBNB": {
+        "name": "EverBNB (https://t.me/everbnbbsc)",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xebaf4f35729045a9dc8b9d67c87e60458dc25010"
+    },
+    "EYFI": {
+        "name": "Eyfi",
+        "pairSymbol": [
+            "WBNB",
+            "BUSD"
+        ],
+        "tokenAddress": "0xa97ada2fe8f69e670e199cf41af720606d8d3fbd"
+    },
+    "ElonGate": {
+        "name": "ElonGate",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x2a9718deff471f3bb91fa0eceab14154f150a385"
+    },
+    "EverMcAfee": {
+        "name": "EverMcAfee | t.me/EverMcAfee",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xd0e58aa863e7f1ed83c79fb433c77b5531ac3646"
+    },
+    "EverSafe": {
+        "name": "EverSafemoon",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x59071fabc9feae58953e4c93f9fd60b2bc55f367"
+    },
+    "EverUP": {
+        "name": "EverUP",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x5fee6bc9f7ff201939d096e15381d2b56f711c63"
+    },
+    "FARA": {
+        "name": "FaraCrystal",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xf4ed363144981d3a65f42e7d0dc54ff9eef559a1"
+    },
+    "FARMA": {
+        "name": "FriendlyArmadillo",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x25a66bf04bb2a696b7a83db66d624840997a34a4"
+    },
+    "FEG": {
+        "name": "FEGtoken",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xacfc95585d80ab62f67a14c566c1b7a49fe91167"
+    },
+    "FKIT": {
+        "name": "FLOKI",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x5e01fd5e1152cb2cfca975e3e562c956a5e96117"
+    },
+    "FLOKI": {
+        "name": "FLOKI",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xdb1709163093c729ec8a971e0427917e25485418"
+    },
+    "FLORISE": {
+        "name": "FlokiRise",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xa0ef7881f793c99a8d46c2ff46f92752dc499f8e"
+    },
+    "FLokiInu": {
+        "name": "FlokiInu",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x715341718aec4a12026060377ddda560848b6417"
+    },
+    "FOX": {
+        "name": "LittleFox",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x8e0f6291598d30dfb93cd7d2cbccddca76a45a2a"
+    },
+    "FRISE": {
+        "name": "FlashRise",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x2753ac647b5c63c30d63803a834d114d95eadaa4"
+    },
+    "FROZEN": {
+        "name": "Frozencake",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xe7a8e7d7729859ea6eedbd4d67f8c97a22b11435"
+    },
+    "FSInu": {
+        "name": "Floki Shiba Inu",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xe645c220b3c0964425b97fef35c961ee9f7b617a"
+    },
+    "Floki": {
+        "name": "Floki Inu",
+        "pairSymbol": [
+            "WBNB",
+            "USDT"
+        ],
+        "tokenAddress": "0xd1d998aab60aed11093fae4806b8e009de65937a"
+    },
+    "GAP": {
+        "name": "Global Adversity Project",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x62613f4b4f7600c7c0f16c97aefc29c8a2ca524f"
+    },
+    "GBE": {
+        "name": "Gold Bee",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xf9a5e6533e4cb0791ecbb79f710ee8ee980eb853"
+    },
+    "GDILDO": {
+        "name": "GREENDILDOFINANCE.com",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x718f127435213b48c1564c71558608df5770fe68"
+    },
+    "GETRICH": {
+        "name": "EverRich",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xeecf1b979191372249b8d0b9b32457e918a54c82"
+    },
+    "GUH": {
+        "name": "Goes Up Higher",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x42069c0cf4da25420fc4c9d9001ba5af7846ccfd"
+    },
+    "HAI": {
+        "name": "Hacken Token",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xaa9e582e5751d703f85912903bacaddfed26484c"
+    },
+    "HARE": {
+        "name": "Hare Token",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x4afc8c2be6a0783ea16e16066fde140d15979296"
+    },
+    "HFI": {
+        "name": "Hfi Finance",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xa3698725c34cf540156cc9f82509852def013741"
+    },
+    "HMNG": {
+        "name": "HummingBird Finance",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x14357d294fbabbe0fbf59503370c772d563b35b6"
+    },
+    "HODL": {
+        "name": "HODL",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x0e3eaf83ea93abe756690c62c72284943b96a6bc"
+    },
+    "HRISE": {
+        "name": "HellRise",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xfda508acaafa4bd629ab79eac994677c3c2ef831"
+    },
+    "HUNNY": {
+        "name": "Hunny Token",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x565b72163f17849832a692a3c5928cc502f46d69"
+    },
+    "HotDoge": {
+        "name": "Hot Doge",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x1991501f1398663f69dd7391c055bb0df6514f76"
+    },
+    "IMM": {
+        "name": "IMM GLOBAL",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x07bbbd89a1175aeb78050c1db1a9bebc336e7a83"
+    },
+    "KENU": {
+        "name": "Ken-Inu",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xfd914bbb4302d69b9a8c3c96023db6a02be62778"
+    },
+    "KEY": {
+        "name": "MoMo KEY",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x85c128ee1feeb39a59490c720a9c563554b51d33"
+    },
+    "KIR": {
+        "name": "KIRBYCOIN",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x6c5c4059d4495d63773827a5201b820161de5034"
+    },
+    "KOI": {
+        "name": "LuckyKOI",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xd8e42870b2e59a5cb0679eef62d290a7877cc66a"
+    },
+    "KRISE": {
+        "name": "KrakenRise",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xda5cf25a09a5ce24681eca6cbe7dae7efd318bf5"
+    },
+    "LBALD": {
+        "name": "LittleBaldEagle",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x5b279fcef22f860b2ae1b52ff13b2c588c497fdd"
+    },
+    "LBS": {
+        "name": "Little Baby Safemoon",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xce40d5f5e22a538491239b058bc84f585d01ceff"
+    },
+    "LCAT": {
+        "name": "LittleCat",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x03031384c44e3fe060467418e0853e976f48df65"
+    },
+    "LEAF": {
+        "name": "LeafCoin",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x7c2150b12a947acd0355a81b89ada29041af1ed5"
+    },
+    "LINA": {
+        "name": "Linear Token",
+        "pairSymbol": [
+            "BUSD"
+        ],
+        "tokenAddress": "0x762539b45a1dcce3d36d080f74d1aed37844b878"
+    },
+    "LMOOSE": {
+        "name": "LittleMoose",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x17d8c396a55d6c1c2130efc23f4936b56860df9c"
+    },
+    "LTB": {
+        "name": "Littlebull",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x01413859d321f423054f6a26276325e8085dd5fc"
+    },
+    "LTMS": {
+        "name": "LittleMouse",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x10e76264489cdf4b4011f79086d0bb6b55775e79"
+    },
+    "LTRBT": {
+        "name": "LITTLE RABBIT",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x17d749d3e2ac204a07e19d8096d9a05c423ea3af"
+    },
+    "LUCKY": {
+        "name": "LUCKY",
+        "pairSymbol": [
+            "BUSD"
+        ],
+        "tokenAddress": "0xe0d02c755cf7bb93772b8874b4df672a5e88041f"
+    },
+    "LUD": {
+        "name": "LittleUglyDuck",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xde009cb3371825bafb80a01004c58f8166ee13d5"
+    },
+    "MAMI": {
+        "name": "MoonAMI",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xa4b104e75a9b6aeb875e8bf87f249ea9ac3b2b74"
+    },
+    "MAXIS": {
+        "name": "BitcoinMaxis",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x674f0164adc53d259a0b468c216894fc7051320d"
+    },
+    "MBOX": {
+        "name": "Mobox",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x3203c9e46ca618c8c1ce5dc67e7e9d75f5da2377"
+    },
+    "MBY": {
+        "name": "Monkey TOKEN",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x98bc4773bd1e9a53631fd6028e06cd6cd17b7401"
+    },
+    "MCAFEE": {
+        "name": "The Last McAfee Token",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x3081523203f2aefceabd4b9b9edbca05a038db67"
+    },
+    "MERL": {
+        "name": "Merlin Token",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xda360309c59cb8c434b28a91b823344a96444278"
+    },
+    "MOONG": {
+        "name": "MOONGREEN",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x841c7a2c6acdb6a67e80a88e179b36a41a253ca5"
+    },
+    "MOONPIRATE": {
+        "name": "Moonpirate",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xf09b7b6ba6dab7cccc3ae477a174b164c39f4c66"
+    },
+    "MOONRISE": {
+        "name": "MoonRise",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x7ee7f14427cc41d6db17829eb57dc74a26796b9d"
+    },
+    "MUFC": {
+        "name": "MUFC Fan Token",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x2f0b0434fb72bd244b7f102d1fc9c2d721946a3d"
+    },
+    "MYS": {
+        "name": "MysteryCoin",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x344424e5d0b3037c78c698609cd56b36e7481951"
+    },
+    "MysS": {
+        "name": "MysterySister",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xa135845d026ead657adc0b96060a472e77b299b0"
+    },
+    "NCAT": {
+        "name": "Nyan Cat Token",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x0cf011a946f23a03ceff92a4632d5f9288c6c70d"
+    },
+    "NEWINU": {
+        "name": "New Guinea Singing Dog Inu",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x1997830b5beb723f5089bb8fc38766d419a0444d"
+    },
+    "NFTART": {
+        "name": "NFTArt.Finance",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xf7844cb890f4c339c497aeab599abdc3c874b67a"
+    },
+    "NFTB": {
+        "name": "NFTB",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xde3dbbe30cfa9f437b293294d1fd64b26045c71a"
+    },
+    "NFTSHIBA": {
+        "name": "NFTShiba.Finance",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xa2d3e8e0723c6cd0fbc0409fec13b9e67b2420bc"
+    },
+    "NOSTA": {
+        "name": "Nosta",
+        "pairSymbol": [
+            "BUSD"
+        ],
+        "tokenAddress": "0x79236db52e1b6fca35f2d44249cfa78277f57cea"
+    },
+    "O3": {
+        "name": "O3 Swap Token",
+        "pairSymbol": [
+            "BUSD"
+        ],
+        "tokenAddress": "0xee9801669c6138e84bd50deb500827b776777d28"
+    },
+    "OCAT": {
+        "name": "Orange Cat Token",
+        "pairSymbol": [
+            "USDT"
+        ],
+        "tokenAddress": "0x7128e52ca302c5f5beeb801b6ad373fdebe3dc5e"
+    },
+    "ONLYUP": {
+        "name": "Only UP Token",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x8b877ca644627989507351c9587d5fdb55800692"
+    },
+    "OXF": {
+        "name": "Oxford",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x2b74b99a43b315226c7026e598b5238952d7ddfc"
+    },
+    "PEKC": {
+        "name": "PEACOCKCOIN",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x050787de0cf5da03d9387b344334d51cae5dd0fd"
+    },
+    "PHX": {
+        "name": "PhoenixProtocol",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xb98d864ddcb573567b3a2258c9e5cab58fe7974e"
+    },
+    "PIT": {
+        "name": "Pitbull",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xa57ac35ce91ee92caefaa8dc04140c8e232c2e50"
+    },
+    "PLUT": {
+        "name": "Plutos",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x2984f825bfe72e55e1725d5c020258e81ff97450"
+    },
+    "POPIT": {
+        "name": "Popit",
+        "pairSymbol": [
+            "BUSD",
+            "WBNB"
+        ],
+        "tokenAddress": "0x307e77693a4eeb883bf69425f36dc472c93f6d7d"
+    },
+    "PORNROCKET": {
+        "name": "PORNROCKET",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xcf9f991b14620f5ad144eec11f9bc7bf08987622"
+    },
+    "QUACK": {
+        "name": "RichQUACK.com",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xd74b782e05aa25c50e7330af541d46e18f36661c"
+    },
+    "RABBIT": {
+        "name": "Rabbit Coin",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x95a1199eba84ac5f19546519e287d43d2f0e1b41"
+    },
+    "REX": {
+        "name": "Rex Token",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x93bbc215ba0b2b419d58b88e930adcb2a21080df"
+    },
+    "RISE": {
+        "name": "EverRise",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xc7d43f2b51f44f09fbb8a691a0451e8ffcf36c0a"
+    },
+    "RiseUp": {
+        "name": "RiseUp",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x61c911b6d1b46dcadbb61bfa7100290a6faad53d"
+    },
+    "SAFEMOON": {
+        "name": "SafeMoon",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x8076c74c5e3f5852037f31ff0093eeb8c8add8d3"
+    },
+    "SAFEMOONCASH": {
+        "name": "SafeMoonCash",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xf017e2773e4ee0590c81d79ccbcf1b2de1d22877"
+    },
+    "SAFEORBIT": {
+        "name": "SafeOrbit.io",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x0da292e241096140ce2b3d39e5699acc2eca68fa"
+    },
+    "SAFETUSK": {
+        "name": "SAFETUSK",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x57e5ec62f76a7dae75b3d722f7fc59e04229efdf"
+    },
+    "SBM": {
+        "name": "STRAWBERRYMOON",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xb5bf9e8cd2f7360156ee150b98baf19fb57f7edf"
+    },
+    "SD\ud83e\udd88": {
+        "name": "SharkDown",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x39df87691574b5cf8766aba5240ef13c46fa1e58"
+    },
+    "SEED": {
+        "name": "TreeDefi Token",
+        "pairSymbol": [
+            "BUSD",
+            "WBNB",
+            "BUNNY"
+        ],
+        "tokenAddress": "0x40b34cc972908060d6d527276e17c105d224559d"
+    },
+    "SGO": {
+        "name": "Sportemon-Go",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xe5d46cc0fd592804b36f9dc6d2ed7d4d149ebd6f"
+    },
+    "SHARK": {
+        "name": "BabyShark",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xcc9b175e4b88a22543c44f1cc65b73f63b0d4efe"
+    },
+    "SHIBAWOOF": {
+        "name": "Shibawoof Rise",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x5a177ed72601652291c28541b4f8aa6ed0fc215a"
+    },
+    "SHIBBY": {
+        "name": "Shibby",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xb1035523a844371c2877f8a3b2f2f8d337403b6f"
+    },
+    "SHIBEX": {
+        "name": "SHIBEX",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x17301affac61514a5e6127d2c9fa1754befaea22"
+    },
+    "SHIBSC": {
+        "name": "SHIBA BSC",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xdf0816cc717216c8b0863af8d4f0fc20bc65d643"
+    },
+    "SLTH": {
+        "name": "SLOTHI",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x5b9dbebbad94b8c6467af9e8a851bb120f9601c6"
+    },
+    "SMAN": {
+        "name": "SuperManion.com",
+        "pairSymbol": [
+            "BUSD"
+        ],
+        "tokenAddress": "0x11e53b397c05bcd80109b30bb54708a625c20501"
+    },
+    "Samsung": {
+        "name": "Samsung Sam Token",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x41819c7bddda7f170bbed30914e4f22aa8019c2d"
+    },
+    "ShiCo": {
+        "name": "ShibaCorgi",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x092bbec1342afffd16cfb41b56343d5a299cdf0d"
+    },
+    "TBAKE": {
+        "name": "BakeryTools",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x26d6e280f9687c463420908740ae59f712419147"
+    },
+    "TCUB": {
+        "name": "TCUB www.tiger-king.org",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xb7fda7374362f66a50665b991aa7ee77b2c6abbe"
+    },
+    "THOREUM": {
+        "name": "Thoreum",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x580de58c1bd593a43dadcf0a739d504621817c05"
+    },
+    "TIKI": {
+        "name": "TIKI",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x9b76d1b12ff738c113200eb043350022ebf12ff0"
+    },
+    "TOKAU": {
+        "name": "Tokyo AU Token",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xc409ec8a33f31437ed753c82eed3c5f16d6d7e22"
+    },
+    "TOMAHAWK": {
+        "name": "Tomahawk Token",
+        "pairSymbol": [
+            "BUSD",
+            "WBNB"
+        ],
+        "tokenAddress": "0x25d27722e3b7275916bae2ad9ab50d84815c73f4"
+    },
+    "TRAIL": {
+        "name": "TRAIL",
+        "pairSymbol": [
+            "BUSD"
+        ],
+        "tokenAddress": "0xc9d3fbbc35333abc7d078049984c883baf1ac671"
+    },
+    "TREES": {
+        "name": "SAFETREES",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xd3b77ac07c963b8cead47000a5208434d9a8734d"
+    },
+    "TRX": {
+        "name": "TRON",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x85eac5ac2f758618dfa09bdbe0cf174e7d574d5b"
+    },
+    "TWT": {
+        "name": "Trust Wallet",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x4b0f1812e5df2a09796481ff14017e6005508003"
+    },
+    "USDC": {
+        "name": "USD Coin",
+        "pairSymbol": [
+            "BUSD",
+            "ETH",
+            "WBNB"
+        ],
+        "tokenAddress": "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d"
+    },
+    "USDT": {
+        "name": "Tether USD",
+        "pairSymbol": [
+            "BUSD",
+            "WBNB",
+            "WHALE",
+            "ETH",
+            "BAO",
+            "BabyDoge",
+            "XMPT",
+            "OCAT",
+            "Floki"
+        ],
+        "tokenAddress": "0x55d398326f99059ff775485246999027b3197955"
+    },
+    "UST": {
+        "name": "Wrapped UST Token",
+        "pairSymbol": [
+            "BUSD",
+            "WBNB"
+        ],
+        "tokenAddress": "0x23396cf899ca06c4472205fc903bdb4de249d6fc"
+    },
+    "UncleDoge": {
+        "name": "Uncle Doge Coin",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xf2bd01b46a3ac8800758dd685086b18584f52c78"
+    },
+    "UpRise": {
+        "name": "UpRise",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xc6cc99ef5c07c9a92321a6e7dff28255771d2fc7"
+    },
+    "VEL": {
+        "name": "Velocity",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xf515bb377d057df2f77b4a061bc1eb1f2389f98c"
+    },
+    "WBNB": {
+        "name": "Wrapped BNB",
+        "pairSymbol": [
+            "Cake",
+            "BUSD",
+            "BTCB",
+            "ETH",
+            "USDT",
+            "SAFEMOON",
+            "DOT",
+            "XRP",
+            "ADA",
+            "TRX",
+            "BUNNY",
+            "MBOX",
+            "XVS",
+            "DOGE",
+            "BTT",
+            "BabyDoge",
+            "TWT",
+            "SGO",
+            "RISE",
+            "MERL",
+            "ALPACA",
+            "PORNROCKET",
+            "BP",
+            "HUNNY",
+            "BSCPAD",
+            "WEX",
+            "TIKI",
+            "EPS",
+            "HODL",
+            "BOXER",
+            "HARE",
+            "ElonGate",
+            "HAI",
+            "RABBIT",
+            "SHIBSC",
+            "NEWINU",
+            "KENU",
+            "APYS",
+            "AKUAKU",
+            "AK",
+            "THOREUM",
+            "SLTH",
+            "GUH",
+            "SHIBBY",
+            "NFTB",
+            "DPET",
+            "TREES",
+            "DINK",
+            "COCO",
+            "BabyKishu",
+            "Duke",
+            "BFLOKI",
+            "SHARK",
+            "GDILDO",
+            "FARA",
+            "Baby EverDoge",
+            "FROZEN",
+            "BabyShibaInu",
+            "RiseUp",
+            "WHALE",
+            "DAI",
+            "MUFC",
+            "XWIN",
+            "SD\ud83e\udd88",
+            "FEG",
+            "USDC",
+            "CLOWN",
+            "UncleDoge",
+            "BULLSEYE",
+            "FLORISE",
+            "DASS",
+            "KEY",
+            "VEL",
+            "TCUB",
+            "UST",
+            "PLUT",
+            "MYS",
+            "QUACK",
+            "ALM",
+            "GETRICH",
+            "IMM",
+            "CARBS",
+            "BSL",
+            "PHX",
+            "MOONRISE",
+            "BNBX",
+            "HRISE",
+            "ZABAKU",
+            "WTF",
+            "BBcorgidoge",
+            "CBC",
+            "MysS",
+            "NFTART",
+            "GAP",
+            "EverUP",
+            "NFTSHIBA",
+            "SHIBAWOOF",
+            "CORGI",
+            "LTRBT",
+            "BabyShiba",
+            "BABYODA",
+            "EverMcAfee",
+            "WISE",
+            "FLOKI",
+            "ACE",
+            "UpRise",
+            "EverSafe",
+            "MAMI",
+            "Floki",
+            "LTB",
+            "DOGEBNB",
+            "SAFETUSK",
+            "MBY",
+            "LMOOSE",
+            "ONLYUP",
+            "MCAFEE",
+            "LUD",
+            "BKPK",
+            "TOMAHAWK",
+            "LTMS",
+            "SAFEMOONCASH",
+            "ASS",
+            "SHIBEX",
+            "$LastInu",
+            "TOKAU",
+            "EYFI",
+            "FARMA",
+            "MAXIS",
+            "BOOST",
+            "FOX",
+            "GBE",
+            "KOI",
+            "POPIT",
+            "Samsung",
+            "FSInu",
+            "KRISE",
+            "SBM",
+            "OXF",
+            "BRT",
+            "EVERBNB",
+            "$Bicurious",
+            "KIR",
+            "LCAT",
+            "HFI",
+            "BIDENANCE",
+            "LBALD",
+            "ShiCo",
+            "FRISE",
+            "EUSD",
+            "BabyFlokiDoge",
+            "LBS",
+            "FLokiInu",
+            "REX",
+            "DDOGE",
+            "BOSHIB",
+            "MOONG",
+            "CERBERUS",
+            "FKIT",
+            "ARCHIE",
+            "LEAF",
+            "AUTO",
+            "BONFIRE",
+            "EGG",
+            "SEED",
+            "AQUAGOAT",
+            "PIT",
+            "NCAT",
+            "MOONPIRATE",
+            "TBAKE",
+            "HotDoge",
+            "PEKC",
+            "HMNG",
+            "BSCS",
+            "SAFEORBIT"
+        ],
+        "tokenAddress": "0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c"
+    },
+    "WEX": {
+        "name": "WaultSwap",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xa9c41a46a6b3531d28d5c32f6633dd2ff05dfb90"
+    },
+    "WHALE": {
+        "name": "WhaleFall",
+        "pairSymbol": [
+            "USDT",
+            "WBNB"
+        ],
+        "tokenAddress": "0x587c16b84c64751760f6e3e7e32f896634704352"
+    },
+    "WISE": {
+        "name": "WeRise",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x0c24bb9e12a2922c831936199d7c8e24f12b10cb"
+    },
+    "WTF": {
+        "name": "What The Fuck",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x1d47fd25b241e4eb310d222a192e0d9f99bea482"
+    },
+    "XMPT": {
+        "name": "XiaMiPool Token",
+        "pairSymbol": [
+            "USDT"
+        ],
+        "tokenAddress": "0x8099c0c7b3e530f563d4b121abd2ee365c72fb78"
+    },
+    "XRP": {
+        "name": "XRP Token",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x1d2f0da169ceb9fc7b3144628db156f3f6c60dbe"
+    },
+    "XVS": {
+        "name": "Venus",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xcf6bb5389c92bdda8a3747ddb454cb7a64626c63"
+    },
+    "XWIN": {
+        "name": "xWIN Token",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0xd88ca08d8eec1e9e09562213ae83a7853ebb5d28"
+    },
+    "ZABAKU": {
+        "name": "ZABAKU INU",
+        "pairSymbol": [
+            "WBNB"
+        ],
+        "tokenAddress": "0x1e5f009d4f8ca44b5fcc4963dd301da82b4eed09"
+    }
+}
