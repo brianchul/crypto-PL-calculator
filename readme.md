@@ -6,7 +6,7 @@ support bsc network in this moment
 
 https://crypto-pl-calculator.herokuapp.com/
 
-## installaction
+## Installaction
 
 ### to load venv to powershell, use:
 
@@ -23,7 +23,7 @@ to allow the current user to execute scripts as follows
 
 ``` npm install ``` or see readme in ```frontend/app``` page
 
-## run up
+## Run up
 
 ### backend
 ``` python manager.py runserver``` 
