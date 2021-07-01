@@ -2,11 +2,11 @@
 with token exchange profit & lost analyzer and dex token pair candlestick chart
 
 support bsc network in this moment
-## Example
+## Demo
 
 https://crypto-pl-calculator.herokuapp.com/
 
-## installaction
+## Installaction
 
 ### to load venv to powershell, use:
 
@@ -15,12 +15,15 @@ https://crypto-pl-calculator.herokuapp.com/
 to allow the current user to execute scripts as follows
 
 
-### python setup
-backend
+### backend setup
+
 ``` pip install -r requirements.txt ```
 
+### frontend setup
 
-## run up
+``` npm install ``` or see readme in ```frontend/app``` page
+
+## Run up
 
 ### backend
 ``` python manager.py runserver``` 
@@ -55,3 +58,7 @@ backend
 - [x] add typescript support
 - [ ] UI/UX
 - [ ] add mvvm pattern
+
+
+## license
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
