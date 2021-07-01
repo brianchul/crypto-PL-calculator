@@ -15,10 +15,13 @@ https://crypto-pl-calculator.herokuapp.com/
 to allow the current user to execute scripts as follows
 
 
-### python setup
-backend
+### backend setup
+
 ``` pip install -r requirements.txt ```
 
+### frontend setup
+
+``` npm install ``` or see readme in ```frontend/app``` page
 
 ## run up
 
