@@ -1,5 +1,6 @@
 # A crypto dex tool web
-with token exchange profit & lost analyzer and dex token pair candlestick chart
+DEX token exchange profit & lost analyzer
+Token to token pair candlestick chart
 
 support bsc network in this moment
 ## Demo
@@ -26,16 +27,24 @@ to allow the current user to execute scripts as follows
 ## Run up
 
 ### backend
-``` python manager.py runserver``` 
+``` python manager.py runserver```
 
 ### frontend
 ```npm build```
+
+## Dockerize file also available
+api token in dockerfile environment and you are good to go
+
+```ENV COVALENT_API=YOURAPIKEY```
+```ENV BITQUERY_API=YOURAPIKEY```
+
+```docker build -t crypto-pl-calculator . && docker run -d -p 3001:3001 crypto-pl-calculator```
 ## ToDo
 
 ### backend
 
 - [ ] support farm harvest transaction
-- [ ] add transaction cache support
+- [x] add transaction cache support with redis
 - [ ] add chart price cache support with mongo db
 - [ ] calculate token to token ratio using graphql
 - [x] fetch api add retry or rate limit
@@ -46,6 +55,8 @@ to allow the current user to execute scripts as follows
 - [ ] write integration test
 - [ ] support other currency mainnet
 - [x] query kline support
+- [ ] cache kline price
+- [ ] get dex live price using contract multicall
 
 ### frontend
 - [x] use table to show tokens

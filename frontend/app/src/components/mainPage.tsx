@@ -16,6 +16,8 @@ const MainPage: FC = () => {
         await fetchData(url)
     }
     const GetAccount = (acc: string) => {
+        if(acc.indexOf("/") === -1)
+            acc += "/"
         setFullUrl(baseUrl + acc)
     }
 
