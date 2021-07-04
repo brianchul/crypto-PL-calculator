@@ -7,23 +7,31 @@ from ..extension.datetimeparser import datetimeIsoFormatCleanup
 from ..extension.price import Price
 from ..model.token import TokenHistory
 from ..model.transaction import Transaction
+from ..middleware.cache import getOrSetCache
 
-
-def getOneTransaction(txid: str):
-    pass
 
 def analysisToken(address: str):
+    cache = getOrSetCache()
     covalentApi = Convalenthq()
     covalentApi.setAddress(address)
     newPriceApi = Price()
 
-    r, code = covalentApi.getAddressBalance()
+    data, code = covalentApi.getAddressTransactions()
     if code != 200:
-        abort(code, description=r["error_message"])
-        #return json.dumps(r)
+        abort(code, description=data["error_message"])
 
-    r, code = covalentApi.getAddressTransactions()
-    data = r
+    if cache.hashValueHasChange(address, "lastBlock", str(data["data"]["items"][0]["block_height"])):
+        tokenData = recalcAddressTransactions(covalentApi, newPriceApi, data)
+        cache.hashSet(address, "lastBlock", str(data["data"]["items"][0]["block_height"]))
+        cache.hashSet(address, "latestData", json.dumps(tokenData))
+    else:
+        tokenData = cache.hashGet(address, "latestData")
+
+    return tokenData
+
+
+
+def recalcAddressTransactions(covalentApi, newPriceApi, data):
     history = TokenHistory()
     totalTransactions = 0
     matchedTransactions = []
@@ -76,4 +84,3 @@ def analysisToken(address: str):
         newTransaction = Transaction(transactionDetail["data"]["items"][0]["tx_hash"], fromToken, fromTokenAmount, toToken, toTokenAmount, swapCostUsd, swapDate.isoformat())
         history.addTransaction(newTransaction)
     return history.printAll()
-

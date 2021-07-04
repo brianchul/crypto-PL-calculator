@@ -1,3 +1,4 @@
+from ..middleware.cache import getOrSetCache
 from flask import Blueprint, Response, abort
 import json
 from ..controller.address import analysisToken
@@ -10,7 +11,6 @@ accountBlueprint = Blueprint('account', __name__)
 def accountIndex():
     content = []
     with open("transaction.json", "r") as f:
-        
         content = json.loads(f.read())
         f.close()
     return successResponse(content)
@@ -22,6 +22,6 @@ def accountEmpty():
 
 @accountBlueprint.route("/<address>/")
 def queryAddress(address):
-    query = analysisToken(address)
-    return successResponse(query)
+    data = analysisToken(address)
+    return successResponse(data)
 

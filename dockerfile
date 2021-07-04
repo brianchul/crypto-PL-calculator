@@ -1,13 +1,18 @@
 FROM nikolaik/python-nodejs:python3.9-nodejs12-slim
 
 WORKDIR /app
-ADD . /app
+COPY frontend/app/package*.json ./
+COPY backend/requirements.txt ./
+RUN npm install && pip install -r requirements.txt
+RUN apt-get update && apt-get install redis -y
 
+COPY frontend/app /app/frontend/app
 WORKDIR /app/frontend/app
-RUN npm install && npm run build
-
-WORKDIR /app/backend
-RUN pip install -r requirements.txt
+RUN npm run build
 
 
-CMD python manager.py runserver
+ADD . /app
+WORKDIR /app
+
+
+CMD ./detach_app.sh
