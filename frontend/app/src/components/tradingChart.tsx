@@ -179,8 +179,8 @@ const TradingChart: FC = () => {
     return (
         <>
             <Row>
-                <div>Select token using dropdown or manual input token contract address</div>
                 <Space direction="vertical" size={12}>
+                    <div>Select token using dropdown or manual input token contract address</div>
                     <AddressSelector selected={inputOptions} />
                     <Space direction="horizontal" size={6}>
                         <Button onClick={refreshChart} >refresh</Button>
@@ -188,6 +188,7 @@ const TradingChart: FC = () => {
                     </Space>
                 </Space>
             </Row>
+            <Divider/>
             <div id="tradingchart"> </div>
             {responseCode > 200 && <Alert message={errMsg} type="error" banner />}
         </>

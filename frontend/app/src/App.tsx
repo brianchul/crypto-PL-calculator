@@ -11,7 +11,7 @@ function App() {
       <PageHeader
         className="site-page-header"
         title="Crypto Dex tools"
-        subTitle="Just a simple website for practicing"
+        subTitle=""
         backIcon={false}
       />
       <MainPage/>

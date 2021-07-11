@@ -13,8 +13,8 @@ export interface IAddressData {
 }
 
 export interface IAddressInfo{
+    name: string
     amount: number
     costAvg: number
-    name: string
     usdValue: number
 }

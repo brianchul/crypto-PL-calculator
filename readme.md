@@ -1,8 +1,9 @@
 # A crypto dex tool web
 DEX token exchange profit & lost analyzer
+
 Token to token pair candlestick chart
 
-support bsc network in this moment
+support bsc network at this moment
 ## Demo
 
 https://crypto-pl-calculator.herokuapp.com/
@@ -51,8 +52,8 @@ api token in dockerfile environment and you are good to go
 - [ ] change retry mechanism to [rate limiter](`https://gist.github.com/DannyMor/99c680c129a29b0ec315fdcaee01b6ab#file-rate_limiter-py`)
 - [ ] fetch account all transaction by changing page
 - [x] add log support
-- [ ] write unittest
-- [ ] write integration test
+- [ ] add unittest
+- [ ] add integration test
 - [ ] support other currency mainnet
 - [x] query kline support
 - [ ] cache kline price
