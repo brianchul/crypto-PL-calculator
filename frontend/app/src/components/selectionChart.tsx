@@ -1,5 +1,5 @@
 import { FC, useEffect, useRef, useState } from "react";
-import { Button, DatePicker, Divider, Input, Select, Space, Spin } from 'antd';
+import { Button, Collapse, DatePicker, Divider, Input, Select, Space, Spin } from 'antd';
 import useFetchOne from './fetchApi'
 import { IPair } from "../models/pair";
 
@@ -112,87 +112,88 @@ export const AddressSelector: FC<IAddressSelector> = (props) => {
 
     return (
         <>
-            <Space direction="horizontal" size={12}>
-                <span>from:</span>
-                <Input placeholder="token address" onChange={(e) => { setFromToken(e.target.value) }} allowClear={true} value={fromToken} />
-                <span>to:</span>
-                <Input placeholder="token address" onChange={(e) => { setToToken(e.target.value) }} allowClear={true} value={toToken} />
-            </Space>
-            <Space direction="horizontal" size={12}>
-                <span>medium:</span>
-                <Input placeholder="optional" onChange={(e) => { setMediumToken(e.target.value) }} allowClear={true} value={mediumToken} />
-                <span>minute interval:</span>
-                <Input placeholder="60" onChange={(e) => { setInterval(Number(e.target.value)) }} allowClear={true} />
-            </Space>
-            <Space direction="horizontal" size={12}>
-            <Select
-                showSearch
-                style={{ width: 200 }}
-                placeholder="Select base token"
-                onChange={onChangeFromToken}
-                filterOption={(input, option) =>
-                    option?.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-                }
-                allowClear={true}
-            >
-                {optionData.current !== null ? Object.keys(optionData.current).map(token => {
-                    if (![mediumTokenName, toTokenName].includes(token))
-                        return <Select.Option key={optionData.current[token].description} value={optionData.current[token].value}>{token}</Select.Option>
-                    else return <Select.Option key={optionData.current[token].description} value={optionData.current[token].value} disabled={true}>{token}</Select.Option>
-                }) : <Spin size="small" />}
-            </Select>
+            <Space direction="vertical">
+                <Collapse defaultActiveKey={['1']}>
+                    <Collapse.Panel header="address control" key="1">
+                        <Space direction="horizontal" size={12}>
+                            <span>from:</span>
+                            <Input placeholder="token address" onChange={(e) => { setFromToken(e.target.value) }} allowClear={true} value={fromToken} />
+                            <span>to:</span>
+                            <Input placeholder="token address" onChange={(e) => { setToToken(e.target.value) }} allowClear={true} value={toToken} />
+                            <span>medium:</span>
+                            <Input placeholder="optional" onChange={(e) => { setMediumToken(e.target.value) }} allowClear={true} value={mediumToken} />
+                            <span>minute interval:</span>
+                            <Input placeholder="60" onChange={(e) => { setInterval(Number(e.target.value)) }} allowClear={true} />
+                        </Space>
+                    </Collapse.Panel>
+                </Collapse>
+                <Space direction="horizontal">
+                <Select
+                    showSearch
+                    style={{ width: 200 }}
+                    placeholder="Select base token"
+                    onChange={onChangeFromToken}
+                    filterOption={(input, option) =>
+                        option?.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+                    }
+                    allowClear={true}
+                >
+                    {optionData.current !== null ? Object.keys(optionData.current).map(token => {
+                        if (![mediumTokenName, toTokenName].includes(token))
+                            return <Select.Option key={optionData.current[token].description} value={optionData.current[token].value}>{token}</Select.Option>
+                        else return <Select.Option key={optionData.current[token].description} value={optionData.current[token].value} disabled={true}>{token}</Select.Option>
+                    }) : <Spin size="small" />}
+                </Select>
 
-            <Select
-                showSearch
-                style={{ width: 200 }}
-                placeholder="Select medium token"
-                onChange={onChangeMediumToken}
-                filterOption={(input, option) =>
-                    option?.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-                }
-                allowClear={true}
-            >
-                {optionData.current !== null ? Object.keys(optionData.current).map(token => {
-                    if (![fromTokenName, toTokenName].includes(token))
-                        if (fromTokenName !== "" && !data.current?.data[fromTokenName]?.pairSymbol.includes(token)) { }
-                        else if (toTokenName !== "" && !data.current?.data[toTokenName]?.pairSymbol.includes(token)) { }
-                        else return <Select.Option key={optionData.current[token].description} value={optionData.current[token].value}>{token}</Select.Option>
-                }) : <Spin size="small" />}
-            </Select>
+                <Select
+                    showSearch
+                    style={{ width: 200 }}
+                    placeholder="Select medium token"
+                    onChange={onChangeMediumToken}
+                    filterOption={(input, option) =>
+                        option?.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+                    }
+                    allowClear={true}
+                >
+                    {optionData.current !== null ? Object.keys(optionData.current).map(token => {
+                        if (![fromTokenName, toTokenName].includes(token))
+                            if (fromTokenName !== "" && !data.current?.data[fromTokenName]?.pairSymbol.includes(token)) { }
+                            else if (toTokenName !== "" && !data.current?.data[toTokenName]?.pairSymbol.includes(token)) { }
+                            else return <Select.Option key={optionData.current[token].description} value={optionData.current[token].value}>{token}</Select.Option>
+                    }) : <Spin size="small" />}
+                </Select>
 
-            <Select
-                showSearch
-                style={{ width: 200 }}
-                placeholder="Select to token"
-                onChange={onChangeToToken}
-                filterOption={(input, option) =>
-                    option?.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-                }
-                allowClear={true}
-            >
-                {optionData.current !== null ? Object.keys(optionData.current).map(token => {
-                    if (![fromTokenName, mediumTokenName].includes(token))
-                        return <Select.Option key={optionData.current[token].description} value={optionData.current[token].value}>{token}</Select.Option>
-                    else return <Select.Option key={optionData.current[token].description} value={optionData.current[token].value} disabled={true}>{token}</Select.Option>
-                }) : <Spin size="small" />}
-            </Select>
-            </Space>
-            <Divider/>
-            <Space direction="horizontal" size={12}>
-                <span>Since:</span>
-                <DatePicker onChange={getSince} showTime={true} />
-                <span>Until:</span>
-                <DatePicker onChange={getUntil} showTime={true} />
-                <Divider />
-            </Space>
-            <Divider />
-            <Space direction="horizontal" size={12}>
-                <Button onClick={cakeBunny} >CAKE TO BUNNY</Button>
-                <Button onClick={cakeBp} >CAKE TO BP</Button>
-                <Button onClick={cakeBusd} >CAKE TO BUSD</Button>
+                <Select
+                    showSearch
+                    style={{ width: 200 }}
+                    placeholder="Select to token"
+                    onChange={onChangeToToken}
+                    filterOption={(input, option) =>
+                        option?.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+                    }
+                    allowClear={true}
+                >
+                    {optionData.current !== null ? Object.keys(optionData.current).map(token => {
+                        if (![fromTokenName, mediumTokenName].includes(token))
+                            return <Select.Option key={optionData.current[token].description} value={optionData.current[token].value}>{token}</Select.Option>
+                        else return <Select.Option key={optionData.current[token].description} value={optionData.current[token].value} disabled={true}>{token}</Select.Option>
+                    }) : <Spin size="small" />}
+                </Select>
+                </Space>
+                <Space direction="horizontal" size={12}>
+                    <span>Since:</span>
+                    <DatePicker onChange={getSince} showTime={true} />
+                    <span>Until:</span>
+                    <DatePicker onChange={getUntil} showTime={true} />
+                    <Divider />
+                </Space>
+                <Space direction="horizontal" size={12}>
+                    <Button onClick={cakeBunny} >CAKE TO BUNNY</Button>
+                    <Button onClick={cakeBp} >CAKE TO BP</Button>
+                    <Button onClick={cakeBusd} >CAKE TO BUSD</Button>
+                </Space>
             </Space>
             {mediumTokenName !== "" ? <div>Pair: {fromTokenName} to {toTokenName}; base: {mediumTokenName} </div> : <div>Pair: {fromTokenName} to {toTokenName}</div>}
-
         </>
 
     )

@@ -1,43 +1,42 @@
-import { FC } from 'react'
+import { FC, useRef } from 'react'
 import {IApi} from '../models/api'
-import {IAddressData} from '../models/address'
-import '../style/table.css'
+import {IAddressData, IAddressInfo} from '../models/address'
+import { Table as AntTable } from 'antd'
 
 interface ITable{
     api: IApi<IAddressData[]> | undefined
 }
 
+interface IColumns{
+    title: string
+    dataIndex: string
+    key: string
+}
+
+interface IDataSources extends IAddressInfo{
+    key: string
+}
 
 
 const Table:FC<ITable> = (props) => {
 
+    const columns = useRef<IColumns[]>([]);
+    const dataSource = useRef<IDataSources[]>([]);
+
+
+    if (props.api !== undefined){
+        columns.current = ["name", "amount", "usdValue", "costAvg"].map((key, index) => {
+            return { title: key , dataIndex: key, key: key}
+        })
+
+        dataSource.current = props.api.data.map((row, index) => {
+            return {key: index.toString(), name: row.info.name, amount:row.info.amount, costAvg: row.info.costAvg, usdValue: row.info.usdValue}
+        })
+
+    }
 
     return  props.api === undefined || props.api.data === null  ? <div>No data</div> :
-        <table>
-            <thead>
-                <tr>{
-                        Object.keys(props.api.data[0].info).map((key, index) => {
-                            return <th key={key}>{key.toUpperCase()}</th>
-                        })
-                    }</tr>
-            </thead>
-            <tbody>{
-                props.api.data.map((row, index) => {
-                    return <tr key={index}><RenderRow key={index} data={row.info} keys={Object.keys(row.info)}></RenderRow></tr>
-                })
-            }</tbody>
-        </table>
-    
-}
-
-const RenderRow = (props:any) => {
-    return (
-        <>
-            {props.keys.map((key:string) => {
-                return <td key={props.data[key]}>{props.data[key]}</td>
-            })}
-        </>
-    )
+        <AntTable dataSource={dataSource.current} columns={columns.current} />;
     
 }
 

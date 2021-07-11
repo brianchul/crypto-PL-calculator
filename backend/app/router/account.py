@@ -7,7 +7,7 @@ from ..middleware.response import successResponse
 
 accountBlueprint = Blueprint('account', __name__)
 
-@accountBlueprint.route("/test")
+@accountBlueprint.route("/test/")
 def accountIndex():
     content = []
     with open("transaction.json", "r") as f:
